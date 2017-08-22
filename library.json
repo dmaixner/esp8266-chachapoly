@@ -16,6 +16,6 @@
     "frameworks": "arduino",
     "platforms": "espressif8266",
     "dependencies": {
-        "Crypto": "Crypto"
+        "name": "Crypto"
     }
 }

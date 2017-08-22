@@ -1,4 +1,4 @@
-# NodeMCU ESP8266 ChaCha20 and Poly1305 helper library
+# ESP8266 ChaCha20 and Poly1305 helper library
 Simple encapsulation library for [Crypto](https://github.com/rweather/arduinolibs/tree/master/libraries/Crypto) library, used for encrypting and decrypting with ChaCha20 and Poly1305 algorithms.
 
 ChaCha20-Poly1305 is an AEAD, Authenticated Encryption with Additional Data cipher. It uses four components:

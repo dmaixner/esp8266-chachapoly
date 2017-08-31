@@ -3,7 +3,7 @@
 
 ChaChaPoly chaChaPoly;
 
-void ChaChaPolyHelper::cipher(const byte key[CHA_CHA_POLY_KEY_SIZE], const byte iv[CHA_CHA_POLY_IV_SIZE], const byte auth[CHA_CHA_POLY_AUTH_SIZE], const byte plainText[CHA_CHA_POLY_MESSAGE_SIZE], byte cipherText[CHA_CHA_POLY_MESSAGE_SIZE], byte tag[CHA_CHA_POLY_TAG_SIZE])
+void ChaChaPolyHelper::encrypt(const byte key[CHA_CHA_POLY_KEY_SIZE], const byte iv[CHA_CHA_POLY_IV_SIZE], const byte auth[CHA_CHA_POLY_AUTH_SIZE], const byte plainText[CHA_CHA_POLY_MESSAGE_SIZE], byte cipherText[CHA_CHA_POLY_MESSAGE_SIZE], byte tag[CHA_CHA_POLY_TAG_SIZE])
 {
     chaChaPoly.clear();
     chaChaPoly.setKey(key, CHA_CHA_POLY_KEY_SIZE);
@@ -13,7 +13,7 @@ void ChaChaPolyHelper::cipher(const byte key[CHA_CHA_POLY_KEY_SIZE], const byte 
     chaChaPoly.computeTag(tag, CHA_CHA_POLY_TAG_SIZE);
 }
 
-bool ChaChaPolyHelper::decipher(const byte key[CHA_CHA_POLY_KEY_SIZE], const byte iv[CHA_CHA_POLY_IV_SIZE], const byte auth[CHA_CHA_POLY_AUTH_SIZE], const byte cipherText[CHA_CHA_POLY_MESSAGE_SIZE], byte plainText[CHA_CHA_POLY_MESSAGE_SIZE], const byte tag[CHA_CHA_POLY_TAG_SIZE])
+bool ChaChaPolyHelper::decrypt(const byte key[CHA_CHA_POLY_KEY_SIZE], const byte iv[CHA_CHA_POLY_IV_SIZE], const byte auth[CHA_CHA_POLY_AUTH_SIZE], const byte cipherText[CHA_CHA_POLY_MESSAGE_SIZE], byte plainText[CHA_CHA_POLY_MESSAGE_SIZE], const byte tag[CHA_CHA_POLY_TAG_SIZE])
 {
     chaChaPoly.clear();
     chaChaPoly.setKey(key, CHA_CHA_POLY_KEY_SIZE);
